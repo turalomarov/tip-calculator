@@ -1,0 +1,15 @@
+@import "src/styles/helpers";
+
+$shadow: 0px 6px 6px -4px $light-gray;
+
+.card {
+  width: 100%;
+  max-width: rem(920);
+  height: rem(480);
+  background: $white;
+  border-radius: rem(24);
+  margin: rem(60) rem(0) rem(11) rem(0);
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+}

@@ -1,0 +1,15 @@
+@import "src/styles/helpers";
+
+.main {
+  height: 100vh;
+  @include flex-column(center, center);
+}
+
+.title {
+  @include font-size(26, normal, 10);
+  width: rem(104);
+  color: $dark-gray;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}

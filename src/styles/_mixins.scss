@@ -1,0 +1,51 @@
+@use "sass:math";
+
+@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal, $font-style: normal) {
+  font-size: $font-size * 1px;
+  @if $font-style==normal {
+    font-style: normal;
+  }
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: calc($line-height / $font-size);
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: #{calc($letter-spacing / $font-size)}em;
+  }
+}
+
+
+@mixin desktop() {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin flex-row($align:flex-start, $justify:flex-start) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flex-column($align:flex-start, $justify:flex-start) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@function rem($pxValue) {
+  @return math.div($pxValue, 16) + rem;
+}
