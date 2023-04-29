@@ -1,5 +1,11 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:@next/next/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "rules": {
     "import/no-unresolved": 0,
@@ -9,6 +15,16 @@
       "unnamedComponents": ["function-expression", "arrow-function"]
     }],
     "camelcase": [2, {"ignoreImports":true}],
-    "react/react-in-jsx-scope": 0
-  }
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": 0
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
 }

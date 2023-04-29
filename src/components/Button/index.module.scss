@@ -1,0 +1,35 @@
+@import "src/styles/helpers";
+
+.btn {
+  width: 100%;
+  min-height: 48px;
+  border-radius: rem(8);
+  font-weight: 700;
+  cursor: pointer;
+  @include transition();
+
+  &:hover {
+    background: $primary-light;
+  }
+}
+
+.button {
+  background: $primary;
+  color: $dark;
+  @include font-size(18);
+}
+
+.tip {
+  background: $dark;
+  color: $white;
+  @include font-size(24);
+
+  &_selected {
+    background: $primary-light;
+    color: $dark;
+  }
+
+  &:hover {
+    color: $dark;
+  }
+}

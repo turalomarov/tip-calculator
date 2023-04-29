@@ -39,11 +39,15 @@
   justify-content: $justify;
 }
 
-@mixin flex-column($align:flex-start, $justify:flex-start) {
+@mixin flex-column($align:normal, $justify:normal) {
   display: flex;
   flex-direction: column;
   align-items: $align;
   justify-content: $justify;
+}
+
+@mixin transition($type:all, $time: .3s, $animation: ease) {
+  transition: $type $time $animation;
 }
 
 @function rem($pxValue) {
