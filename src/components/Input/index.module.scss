@@ -15,8 +15,38 @@
   color: $dark-gray;
 }
 
-.error_message {
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.error {
   color: $red;
+
+  &_show {
+    animation: inAnimation 250ms ease-in
+  }
+
+  &_hide {
+    animation: outAnimation 270ms ease-out;
+    animation-fill-mode: forwards;
+  }
 }
 
 .input_box {
@@ -45,7 +75,7 @@
 
   &_error {
     border: 2px solid $red;
-    outline:none;
+    outline: none;
   }
 
   &_icon {

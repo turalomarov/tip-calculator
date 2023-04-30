@@ -22,7 +22,15 @@ const Input:React.FC<InputProps> = ({
         (label || error) && (
         <div className={styles.label_box}>
           <span className={styles.label}>{label}</span>
-          <span className={styles.error_message}>{error}</span>
+            {
+                error && (
+                <span
+                  className={`${styles.error} ${error ? styles.error_show : styles.error_hide}`}
+                >
+                  {error}
+                </span>
+                )
+            }
         </div>
         )
     }

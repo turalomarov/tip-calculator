@@ -2,11 +2,16 @@
 
 .btn {
   width: 100%;
-  min-height: 48px;
+  min-height: rem(48);
   border-radius: rem(8);
   font-weight: 700;
   cursor: pointer;
   @include transition();
+
+  &:disabled {
+    opacity: .3;
+    pointer-events: none;
+  }
 
   &:hover {
     background: $primary-light;

@@ -17,7 +17,9 @@
     "camelcase": [2, {"ignoreImports":true}],
     "react/react-in-jsx-scope": 0,
     "react/jsx-props-no-spreading": 0,
-    "react/require-default-props": 0
+    "react/require-default-props": 0,
+    "import/extensions":[2, {"ignorePackages": true, "pattern": {"scss": "ignorePackages"}} ],
+    "no-param-reassign": ["error", { "props": false }]
   },
   "overrides": [
     {

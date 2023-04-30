@@ -1,0 +1,24 @@
+@import "src/styles/helpers";
+
+.tips_box {
+  padding: rem(44) 0;
+}
+
+.tips_label {
+  @include font-size(14);
+  color: $dark-gray;
+  margin-bottom: rem(18);
+}
+
+.tips_options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: rem(48);
+  gap: rem(14)
+}
+
+@include mobile() {
+  .tips_options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

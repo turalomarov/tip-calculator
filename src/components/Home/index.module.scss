@@ -3,13 +3,13 @@
 .main {
   height: 100vh;
   @include flex-column(center, center);
+  padding: rem(0) rem(10);
 }
 
-.title {
-  @include font-size(26, normal, 10);
-  width: rem(104);
-  color: $dark-gray;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
+@include tablet() {
+  .main {
+    height: auto;
+    @include flex-column(center);
+    padding: rem(60) rem(0) rem(0);
+  }
 }
