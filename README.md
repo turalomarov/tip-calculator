@@ -21,6 +21,7 @@ Users should be able to:
 - Calculate the correct tip and total cost of the bill per person
 
 ### Built with
+[![My Skills](https://skills.thijs.gg/icons?i=ts,next,sass,redux,githubactions)](https://skills.thijs.gg)
 
 - CSS modules with Sass preprocessor for styles
 - Next.js and Redux Toolkit
